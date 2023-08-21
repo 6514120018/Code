@@ -1,0 +1,38 @@
+<template>
+  <div>
+    <h1>{{ title }}</h1>
+    <h2>{{ count }}</h2>
+    <button @click="onClickAdd">Add</button>
+    <h2>{{ count2 }}</h2>
+    <button @click="onClickAdd2">Add</button>
+    <h2>{{ sum }}</h2>
+    <button @click="onClickSum">Sum</button>
+  </div>
+</template>
+
+<script>
+export default {
+  name:"app",
+  data() {
+    return {
+      title:"6514120018 ศุภสรณ์ ลีลาสถาพรชัย",
+      count: 0,
+      count2: 0,
+      sum: 0,
+    };
+  },
+
+  methods: {
+    onClickAdd() {
+      this.count = Math.ceil(Math.random()*100);
+    },
+    onClickAdd2() {
+      this.count2 = Math.ceil(Math.random()*100);
+    },
+    onClickSum() {
+      this.sum = this.count + this.count2;
+    },
+  },
+};
+</script>
+<style></style>
